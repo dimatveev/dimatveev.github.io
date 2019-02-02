@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>moving</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div class="wrapper">
+		<nav>
+			<a href="#red " class="link">red</a>
+			<a href="#blue" class="link">blue</a>
+			<a href="#green " class="link">green</a>
+
+		</nav>
+	</div>
+	<div id="green"></div>
+	<div id="red"></div>
+	<div id="blue"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script >
+	
+	$(document).ready(
+		$('.link').on('click', function() {
+			var href = $.attr(this, 'href');
+			$('body, html').animate({
+				scrollTop: $(href).offset().top
+			}, 500);
+			return false;
+		})
+	)
+</script>
+</body>
+</html>
