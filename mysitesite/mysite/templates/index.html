@@ -1,0 +1,162 @@
+
+{% extends "layout.html" %}
+
+{% block body%}
+<style>
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+</style>
+
+
+
+   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkNDggKCgkLBQ0NDQwNDRYIDQUKFBEWFhURFR8YHSggGBolGxMWITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NFw8QFSsZExkrLSsrKystKysrKysrLSsrKysrKystKysrKysrLSsrKysrKysrKysrKysrKysrKysrK//AABEIAI4BBgMBIgACEQEDEQH/xAAaAAEBAQEBAQEAAAAAAAAAAAABAAIGBQME/8QAFxABAQEBAAAAAAAAAAAAAAAAAAERAv/EABsBAQEBAAIDAAAAAAAAAAAAAAABAgQFAwYH/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oADAMBAAIRAxEAPwD9+Ip8917uCcWAomsMNRk4SmjOGFYglGimjLSwxBREwA0CggqyBFVZXAs0UNBFFZXAiihVIZo1cGlrOrVwaTOoxH3xNB4wE4sBLDCATSxAFYkFESCMWFAFKgqKACFVCiZqoaFRVWWhUJiqpoDKhoFFawOrWQuDephGD0E0nHRklYCWLEgYGkAJhQESIApUEyWaCoqqqiZqoqwQooaAKay0orJZqwAqoakEzRQ0EayFG9TBB62LEnEQooAVCAKxIKFIEkKCqQoKs1pmqIU1mqCimiqCs1qs1qArNarFWKKy1WK0Cs0stAZNZbFQKFwaTGpR7hRcFAigSiKCSSCSQBIKIFmqLVQgVZporQqzTRQFZporQGTWa1FFYrVZrUGazTWa1AM01luAZqoURGpR0CWF16ApACkCSFBKoUEklBRVQBoQUVFVFUFFNFUFFVVaGKzWqzVis0U1mtQZrNNZrcGaxWqxWoAU1itiIIOiKTrkSSBApBAhRBVKJmtABQVVAFRVAqhQVFNZrQKDWaqis00VoZ6Y6arFagzWemqxW4M1mms1qArNSrSJBKOlSTrBJJRBVAlqCgpQBCqgEqhVFWTQoqKqqoKzSKoqxTRWlZoprKwFYrVYrcBXzrVZrUGKKaxW4CiqitIkEo6YpOsEkAVSCiSZoFIAqElAKRVFQqgFFNZrQKqqzqqqzTrNUDNNFagxWa1Wa1BnpitVitwZrFbrFbiCs1qstASQP//Z" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>My trips</h1>
+                <p>I like to travel, here you can see more information about my trips</p>
+                <a href="{{ url_for('trips') }}"><button type="submit" class="btn btn-primary">my trips</button></a>
+    </div>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkNDggKCgkLBQ0NDQwNDRYIDQUKFBEWFhURFR8YHSggGBolGxMWITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NFw8QFSsZExkrLSsrKystKysrKysrLSsrKysrKystKysrKysrLSsrKysrKysrKysrKysrKysrKysrK//AABEIAI4BBgMBIgACEQEDEQH/xAAaAAEBAQEBAQEAAAAAAAAAAAABAAIGBQME/8QAFxABAQEBAAAAAAAAAAAAAAAAAAERAv/EABsBAQEBAAIDAAAAAAAAAAAAAAABAgQFAwYH/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oADAMBAAIRAxEAPwD9+Ip8917uCcWAomsMNRk4SmjOGFYglGimjLSwxBREwA0CggqyBFVZXAs0UNBFFZXAiihVIZo1cGlrOrVwaTOoxH3xNB4wE4sBLDCATSxAFYkFESCMWFAFKgqKACFVCiZqoaFRVWWhUJiqpoDKhoFFawOrWQuDephGD0E0nHRklYCWLEgYGkAJhQESIApUEyWaCoqqqiZqoqwQooaAKay0orJZqwAqoakEzRQ0EayFG9TBB62LEnEQooAVCAKxIKFIEkKCqQoKs1pmqIU1mqCimiqCs1qs1qArNarFWKKy1WK0Cs0stAZNZbFQKFwaTGpR7hRcFAigSiKCSSCSQBIKIFmqLVQgVZporQqzTRQFZporQGTWa1FFYrVZrUGazTWa1AM01luAZqoURGpR0CWF16ApACkCSFBKoUEklBRVQBoQUVFVFUFFNFUFFVVaGKzWqzVis0U1mtQZrNNZrcGaxWqxWoAU1itiIIOiKTrkSSBApBAhRBVKJmtABQVVAFRVAqhQVFNZrQKDWaqis00VoZ6Y6arFagzWemqxW4M1mms1qArNSrSJBKOlSTrBJJRBVAlqCgpQBCqgEqhVFWTQoqKqqoKzSKoqxTRWlZoprKwFYrVYrcBXzrVZrUGKKaxW4CiqitIkEo6YpOsEkAVSCiSZoFIAqElAKRVFQqgFFNZrQKqqzqqqzTrNUDNNFagxWa1Wa1BnpitVitwZrFbrFbiCs1qstASQP//Z" alt="Second slide">
+   <div class="container">
+              <div class="carousel-caption">
+                <h1>I have a lot of social networks, where I post some cool things!</h1>
+                <p>Also you can contact me in these social networks</p>
+                <a href="{{ url_for('contact') }}"><button type="submit" class="btn btn-primary">contact me</button></a>
+              </div>
+            </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkNDggKCgkLBQ0NDQwNDRYIDQUKFBEWFhURFR8YHSggGBolGxMWITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NFw8QFSsZExkrLSsrKystKysrKysrLSsrKysrKystKysrKysrLSsrKysrKysrKysrKysrKysrKysrK//AABEIAI4BBgMBIgACEQEDEQH/xAAaAAEBAQEBAQEAAAAAAAAAAAABAAIGBQME/8QAFxABAQEBAAAAAAAAAAAAAAAAAAERAv/EABsBAQEBAAIDAAAAAAAAAAAAAAABAgQFAwYH/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oADAMBAAIRAxEAPwD9+Ip8917uCcWAomsMNRk4SmjOGFYglGimjLSwxBREwA0CggqyBFVZXAs0UNBFFZXAiihVIZo1cGlrOrVwaTOoxH3xNB4wE4sBLDCATSxAFYkFESCMWFAFKgqKACFVCiZqoaFRVWWhUJiqpoDKhoFFawOrWQuDephGD0E0nHRklYCWLEgYGkAJhQESIApUEyWaCoqqqiZqoqwQooaAKay0orJZqwAqoakEzRQ0EayFG9TBB62LEnEQooAVCAKxIKFIEkKCqQoKs1pmqIU1mqCimiqCs1qs1qArNarFWKKy1WK0Cs0stAZNZbFQKFwaTGpR7hRcFAigSiKCSSCSQBIKIFmqLVQgVZporQqzTRQFZporQGTWa1FFYrVZrUGazTWa1AM01luAZqoURGpR0CWF16ApACkCSFBKoUEklBRVQBoQUVFVFUFFNFUFFVVaGKzWqzVis0U1mtQZrNNZrcGaxWqxWoAU1itiIIOiKTrkSSBApBAhRBVKJmtABQVVAFRVAqhQVFNZrQKDWaqis00VoZ6Y6arFagzWemqxW4M1mms1qArNSrSJBKOlSTrBJJRBVAlqCgpQBCqgEqhVFWTQoqKqqoKzSKoqxTRWlZoprKwFYrVYrcBXzrVZrUGKKaxW4CiqitIkEo6YpOsEkAVSCiSZoFIAqElAKRVFQqgFFNZrQKqqzqqqzTrNUDNNFagxWa1Wa1BnpitVitwZrFbrFbiCs1qstASQP//Z" alt="Third slide">
+    <div class="container">
+              <div class="carousel-caption">
+                <h1>If you like this site you can donate me</h1>
+                <p>here are the places where you can donate me</p>
+                <a href="{{ url_for('donate') }}"><button type="submit" class="btn btn-primary">Donate</button></a>
+              </div>
+            </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+<div class="jumbotron">
+  <h1 class="display-4">Hi, I am Dmitry</h1>
+  <p class="lead"> I made this website to tell the world about me!</p>
+  <hr class="my-4">
+
+</div>
+
+
+
+
+
+{% endblock %}
